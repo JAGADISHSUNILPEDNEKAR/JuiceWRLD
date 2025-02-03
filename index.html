@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice WRLD</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url('https://pbs.twimg.com/media/FGJVx4CVkAASvWG?format=jpg&name=large'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    #lyrics {
+      font-size: 24px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="lyrics">Loading lyrics...</div>
+
+<audio id="audio" loop>
+  <source src="audiofile123.mp3" type="audio/mpeg"> <!-- Replace with your audio URL -->
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const lyrics = [
+    { time: 0, text: "No, no, no, no" },
+    { time: 23, text: "I still see your shadows in my room Can't take back the love that I gave you It's to the point where I love and I hate you And I cannot change you, so I must replace you (oh) Easier said than done I thought you were the one Listening to my heart instead of my head You found another one, but I am the better one I won't let you forget me" },
+    { time: 46, text: "I still see your shadows in my room Can't take back the love that I gave you It's to the point where I love and I hate you And I cannot change you so I must replace you (oh) Easier said than done I thought you were the one Listening to my heart instead of my head You found another one, but I am the better one I won't let you forget me" },
+    { time: 69, text: "You left me falling and landing inside my grave I know that you want me dead I take prescriptions to make me feel a-okay I know it's all in my head" },
+    { time: 92, text: "I have these lucid dreams where I can't move a thing Thinking of you in my bed You were my everything Thoughts of a wedding ring Now I'm just better off dead" },
+    { time: 115, text: "I'll do it over again I didn't want it to end I watched it blow in the wind I should've listened to my friendsLeave this shit in the past But I want it to last You were made outta plastic (fake) I was tangled up in your drastic ways Who knew evil girls have the prettiest face? You gave me a heart that was full of mistakes I gave you my heart and you made heart break" },
+    { time: 138, text: "You made my heart break You made my heart ache (I still see your shadows in my room) You made my heart break You made my heart ache (can't take back the love that I gave you) You made my heart break (were made outta plastic, fake) You made my heart ache (I still see your shadows in my room) You made my heart break again (I was tangled up your drastic ways) (Who knew evil girls have the prettiest face?)" },
+    { time: 161, text: "I still see your shadows in my room Can't take back the love that I gave you It's to the point where I love and I hate you And I cannot change you so I must replace you (oh) Easier said than done I thought you were the one Listening to my heart instead of my head You found another one, but I am the better one I won't let you forget me  " },
+    { time: 184, text: "I still see your shadows in my room Can't take back the love that I gave you It's to the point where I love and I hate you And I cannot change you so I must replace you (oh) Easier said than done I thought you were the oneListening to my heart instead of my head You found another one, but I am the better one I won't let you forget me " },
+    { time: 207, text: "Leave this shit in the past, but I want it to last You were made outta plastic (fake) I was tangled up in your drastic ways Who knew evil girls have the prettiest face? Easier said than doneI thought you were-(Instead of my head, you found another)I won't let you forget me " },
+    { time: 230, text: "Line 5 of the song" },
+    
+    // Add more lines with corresponding times (in seconds)
+  ];
+
+  const audio = document.getElementById('audio');
+  const lyricsDiv = document.getElementById('lyrics');
+
+  audio.play();
+
+  // Function to sync lyrics with audio
+  function syncLyrics() {
+    let currentTime = audio.currentTime;
+
+    // Find the corresponding lyric line based on current time
+    for (let i = 0; i < lyrics.length; i++) {
+      if (currentTime >= lyrics[i].time && (i === lyrics.length - 1 || currentTime < lyrics[i + 1].time)) {
+        lyricsDiv.textContent = lyrics[i].text;
+        break;
+      }
+    }
+  }
+
+  // Update lyrics at every second
+  setInterval(syncLyrics, 2300);
+
+  // Start audio and reset lyrics on loop
+  audio.addEventListener('ended', function () {
+    audio.currentTime = 0;
+    audio.play();
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
