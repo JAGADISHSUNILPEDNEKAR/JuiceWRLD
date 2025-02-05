@@ -1,15 +1,27 @@
-## Musical Website
+A dynamic website where song lyrics sync with music playback in real-time. Built with JavaScript for an enhanced user experience.
+# 🎵 Musical Website
 
-A dynamic website where **song lyrics** sync with the **music playback**, creating a rich and interactive user experience. This project aims to enhance music engagement by displaying lyrics that change in real-time based on the song’s playback position.
+## 🚀 Project Overview
+A **music-driven web application** that syncs song lyrics with the music playback in real-time, improving the user experience.
 
-### Features:
-- Syncs song lyrics with the music track in real-time.
-- Play, pause, and skip options for the music track.
-- Simple interface with a focus on lyrics and song interaction.
+## 🔥 Key Features
+- **Real-time Lyrics Sync:** Displays lyrics as the song plays.
+- **Dynamic UI:** Engaging and visually appealing music interface.
+- **Playlist Feature:** Users can select and play songs.
 
-### Technologies Used:
-- **HTML**
-- **CSS**
-- **JavaScript**
+## 🛠️ Technologies Used
+- **HTML, CSS, JavaScript** – Core web technologies.
+- **Web Audio API** – For handling audio synchronization.
 
-Check out the live version here: [Link to your live project (if applicable)].
+## 🌐 Live Demo
+[Experience the Musical Website](https://your-deployment-link.com)
+
+## 📸 Screenshot
+![Musical Website](https://your-image-link.com)
+
+## 🤝 Contributing
+Contributions are welcome! Submit an issue or a pull request.
+
+## 💡 About the Author
+- **Jagadish Sunil Pednekar**
+- **Email:** jsphere16@gmail.com
